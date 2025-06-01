@@ -123,12 +123,30 @@ html {
 
 #Hero .hero-text {
     padding: 20px 80px;
-
     height: 90vh;
     width: 100%;
     background-size: cover;
     background-position: top 25% right 0;
     z-index: 1000; /* Ensure text is above images */
+}
+
+#Hero1 .hero-text {
+    padding: 20px 80px;
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    z-index: 1000; /* Ensure text is above images */
+}
+
+#Hero1 .slide-image {
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .hero-text {
@@ -142,7 +160,7 @@ html {
     transform: translateY(-20%);
 }
 
-#Hero .hero-text  h1 {
+.hero-text  h1 {
     font-size: 4rem;
     width: 100%;
     color: #f1f1f1;
@@ -150,7 +168,7 @@ html {
     text-transform: uppercase;
 }
 
-#Hero .hero-text span {
+.hero-text span {
     color: #e3242b;
     font-size: 4rem;
 }
@@ -361,7 +379,93 @@ html {
     opacity: 1;
 }
 
+#cape-town {
+    padding: 20px 80px;
+}
 
+#cape-town span {
+    color: #e3242b;
+    font-size: 3rem;
+}
+
+.cape_container {
+    /*display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;*/
+    gap: 1em;
+}
+
+.cape_town {
+    display: flex;
+    justify-content: center;
+}
+
+
+.cape-1 img{
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+}
+
+.cape-2 {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+    margin-left: 1em;
+}
+
+.cape-2 img{
+    width: 90%;
+    height: 30vh;
+    background-size: cover;
+
+}
+
+.cape_turing-info {
+    padding: 15px ;
+    border: 2px solid #092d42;
+    background-color: #cac9c9;
+}
+
+.cape_turing-info a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #e3242b;
+    padding: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 2px solid #092d42;
+    margin-bottom: 1em;
+}
+
+.cape_turing-info a:hover {
+    transition: 1s;
+    color: #fff;
+    border: 2px solid #e3242b;
+    background: #e3242b;
+}
+
+.cape_turing-info h2 {
+    color: #e3242b;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.cape_turing-info h3 {
+    color: #114d70;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: .2em;
+}
+
+.cape_turing-info p {
+    color: #383838;
+    margin-bottom: 1em;
+    font-size: 25px;
+    width: 70%;
+}
 
 
 
@@ -402,6 +506,7 @@ html {
     overflow: hidden;
     position: relative;
     border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.925);
 }
 
 .package img {
@@ -416,57 +521,92 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    background: transparent;
-    transition: .5s;
-}
-
-.overlay:hover {
     background: rgba(0, 0, 0, 0.473);
-}
-
-.overlay h3 {
-    color: #fff;
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 2rem;
-    margin-bottom: .5em;
-    padding: 5px;
-    width: 100%;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    opacity: 0;
     transition: .5s;
 }
 
-.overlay:hover h3 {
+/*.overlay:hover {
+    background: rgba(0, 0, 0, 0.473);
+}*/
+
+.image span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    color: transparent;
+    stroke: #092d42;
+    -webkit-text-stroke: 2px #a2bbc9;
+    top: 10%;
+    left: 10%;
+    position: absolute;
+    z-index: 1000;
+}
+
+
+/*.overlay:hover h3,
+.overlay:hover p {
     bottom: 49%;
     opacity: 1;
-}
+}*/
 
-.overlay a {
+.info_package {
     font-size: 2rem;
     font-weight: 800;
-    line-height: 1.75rem;
+    line-height: 3rem;
     text-decoration: none;
     color: #e3242b;
     background: #092d42;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     padding: 10px;
     width: 100%;
-    height: 15%;
-    bottom: 0;
+    height: 45%;
+    bottom: -55%;
     left: 50%;
     transform: translateX(-50%);
-    position: absolute;
+    position: relative;
+    transition: .5s;
+}
+
+.info_package h3 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.info_package p {
+    color: #999b99;
+    font-size: 2rem;
+    font-weight: 800;
+    border: 2px dotted;
+    padding: 5px;
+    margin-bottom: .2em;
+}
+
+.info_package strong {
+    margin-left: 3em;
+    color: #26ad31;
+}
+
+.info_package a{
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1.75rem;
+    text-decoration: none;
+    border-radius: 30px;
+    color: #e3242b;
+    border: 1px solid #207cb1;
+    padding: 10px;
     transition: .5s;
 }
 
 .package a:hover {
     background: #e3242b;
+    border: 1px solid #e3242b;
     color: #092d42;
 }
 
