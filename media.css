@@ -53,6 +53,14 @@
         font-family: 'Poppins';
         text-transform: uppercase;
     }
+
+    #Hero1 .hero-text  h1 {
+        font-size: 3rem;
+        width: 100%;
+        color: #f1f1f1;
+        font-family: 'Poppins';
+        text-transform: uppercase;
+    }
     
     #Hero .hero-text span {
         color: #e3242b;
@@ -106,13 +114,13 @@
         align-items: center;
     }
     
+
     .about_image {
-        max-width: 650px;
+        max-width: 1050px;
     }
 
     .about_image::before {
-        width: 90%;
-        height: 90%;
+        display: none;
     }
     
     .about-text h3 {
@@ -156,6 +164,57 @@
         background: #e3242b;
     }
 
+    .litso {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+    }
+    
+    .litso_flex-1 {
+        /*border: 2px solid #092d42;*/
+        width: 100%;
+    }
+    
+    .litso_flex-2 {
+        width: 100%;
+    }
+    
+    .litso_image img {
+        width: 100%;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0px 5px 10px #092d42;
+        cursor: pointer;
+        margin-bottom: 1em;
+    }
+    
+    .litso_flex-2 img {
+        width: 100%;
+    }
+    
+    .litso-text {
+        padding: 15px;
+        width: 100%;
+    }
+    
+    .litso-text h3 {
+        font-size: 3rem;
+        color: #092d42;
+        text-transform: uppercase;
+        margin-bottom: .5em;
+    }
+    
+    .litso-text span {
+        color: #e3242b;
+    }
+    
+    .litso-text p {
+        font-size: 1.4rem;
+        color: #777676;
+        margin-bottom: 1.5em;
+    }
+
     #Touring {
         padding: 20px 20px;
     }
@@ -193,11 +252,11 @@
         color: #26ad31;
     }
 
-    .backTop{
-        left: 90%;
-    }
-
     #Contact {
+        padding: 20px 20px;
+    }
+    
+    #Contact-info {
         padding: 20px 20px;
     }
 
@@ -217,7 +276,6 @@
         background: #1a1a1a;
         flex-direction: column;
         width: 100%;
-        height: 70vh;
     }
 
     #cape-town {
@@ -265,38 +323,82 @@
     
     .cape_turing-info {
         padding: 15px ;
-        border: 2px solid #092d42;
-        background-color: #cac9c9;
+        width: 100%;
+    }
+
+    .slide_jozi {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .turing-activity {
+        width: 100%;
+        height: 70%;
+        padding: 20px;
+    }
+    
+    .turing-activity h3{
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-bottom: .2em;
+        width: 95%;
+    }
+    
+    .turing-activity ul li {
+        margin-left: 1em;
+        padding: 5px 0;
+        font-size: 25px;
     }
     
     .cape_turing-info a {
         text-decoration: none;
         font-size: 20px;
-        color: #e3242b;
         padding: 10px;
         cursor: pointer;
         text-transform: uppercase;
-        border: 2px solid #092d42;
+        border: 2px solid #55656e;
+        margin-bottom: 2em;
+    }
+    
+    .cape_turing-info strong {
+        font-size: 30px;
+    }
+    
+    .cape_turing-info a:hover {
+        transition: 1s;
+        color: #fff;
+        border: 2px solid #e3242b;
+        background: #e3242b;
     }
     
     .cape_turing-info h2 {
-        color: #e3242b;
-        font-size: 4rem;
+        font-size: 3rem;
         text-transform: uppercase;
     }
     
     .cape_turing-info h3 {
-        color: #114d70;
-        font-size: 1.5rem;
+        font-size: 30px;
         text-transform: uppercase;
         margin-bottom: .2em;
+        width: 100%;
     }
     
     .cape_turing-info p {
-        color: #383838;
         margin-bottom: 1em;
         font-size: 25px;
         width: 100%;
+    }
+
+    form input, textarea {
+        width: 100%;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    .backTop{
+        left: 85%;
     }
 
 
@@ -319,7 +421,7 @@
         flex-direction: column;
         top: 0;
         left: -100%;
-        width: 100%;
+        width: 50%;
         height: 100vh;
         background: rgb(0, 0, 0);
         align-items: start;
@@ -338,26 +440,6 @@
         display: initial;
     }
 
-    #Navbar {
-        padding: 20px 40px;
-    }
-
-    #Navbar img {
-        height: 15vh;
-        width: 45%;
-    }
-
-    #Navbar ul {
-        position: fixed;
-        flex-direction: column;
-        top: 0;
-        left: -100%;
-        width: 50%;
-        height: 50vh;
-        background: rgba(0, 0, 0, 0.733);
-        align-items: start;
-        transition: .3s left;
-    }
 
     #Navbar ul.view {
         left: 0;
@@ -383,9 +465,9 @@
         width: 100%;
     }
 
-    .hero-text {
-        margin-bottom: -18%;
-    }
+    /*.hero-text {
+        margin-bottom: -15%;
+    }*/
 
 
     #Touring {
@@ -402,8 +484,9 @@
     
     .tour-container h4 {
         color: #fff;
-        font-size: 40px;
+        font-size: 30px;
         padding: 10px;
+
     }
     
     .tour {
@@ -465,8 +548,12 @@
     .about_image {
         position: relative;
         isolation: isolate;
-        max-width: 550px;
+        max-width: 1050px;
         margin-inline: auto;
+    }
+
+    .about_image::before {
+        display: none;
     }
     
     .about_image img {
@@ -476,25 +563,6 @@
         background-position: center;
         box-shadow: 0px 5px 10px #092d42;
         cursor: pointer;
-    }
-    
-    .about_image::before {
-        position: absolute;
-        content: " ";
-        width: 100%;
-        height: 90%;
-        background-color: rgba(165, 26, 26, 0.61);
-        border-radius: .5rem;
-        transform: rotate(20deg);
-        z-index: -1;
-        cursor: pointer;
-        transition: 2s;
-    }
-    
-    .about_image:hover::before {
-        transition: 2s;
-        transform: rotate(-20deg);
-        background-color: #092d42c2;
     }
     
     .about-text {
@@ -536,9 +604,158 @@
         background: #e3242b;
     }
 
+    .litso {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+    }
+    
+    .litso_flex-1 {
+        /*border: 2px solid #092d42;*/
+        width: 100%;
+    }
+    
+    .litso_flex-2 {
+        width: 100%;
+        display: flex;
+        gap: .3em;
+    }
+    
+    .litso_image img {
+        width: 100%;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0px 5px 10px #092d42;
+        cursor: pointer;
+        margin-bottom: 1em;
+    }
+    
+    .litso_flex-2 img {
+        width: 100%;
+        height: 40vh;
+    }
+    
+    .litso-text {
+        padding: 15px;
+        width: 100%;
+    }
+    
+    .litso-text h3 {
+        font-size: 3rem;
+        color: #092d42;
+        text-transform: uppercase;
+        margin-bottom: .5em;
+    }
+    
+    .litso-text span {
+        color: #e3242b;
+    }
+    
+    .litso-text p {
+        font-size: 1.4rem;
+        color: #777676;
+        margin-bottom: 1.5em;
+    }
+
+
+
+
+    #cape-town {
+        padding: 20px 40px;
+    }
+
+
+    .slide_jozi {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cape_turing-info {
+        padding: 15px ;
+        background-color: none;
+        width: 100%;
+    }
+    
+    .turing-activity {
+        width: 100%;
+        height: 70%;
+        padding: 20px;
+    }
+
+    .turing-activity h3{
+        color: #403179;
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-bottom: .2em;
+        width: 100%;
+    }
+    
+    .turing-activity ul li {
+        margin-left: 1em;
+        padding: 5px 0;
+        font-size: 25px;
+        color: #7a7a7a;
+    }
+    
+    .cape_turing-info a {
+        text-decoration: none;
+        font-size: 30px;
+        color: #d84639;
+        padding: 10px;
+        cursor: pointer;
+        text-transform: uppercase;
+        border: 2px solid #9b9b99;
+        margin-bottom: 2em;
+    }
+    
+    .cape_turing-info strong {
+        color: #777676;
+        font-size: 30px;
+    }
+    
+    .cape_turing-info a:hover {
+        transition: 1s;
+        color: #fff;
+        border: 2px solid #d84639;
+        background: #d84639;
+    }
+    
+    .cape_turing-info h2 {
+        color: #403179;
+        font-size: 4rem;
+        text-transform: uppercase;
+    }
+    
+    .cape_turing-info h3 {
+        color: #114d70;
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-bottom: .2em;
+        width: 100%;
+    }
+    
+    .cape_turing-info p {
+        color: #9b9b99;
+        margin-bottom: 1em;
+        font-size: 25px;
+        width: 100%;
+        font-family:  sans-serif;
+    }
+
 
     #Package {
         padding: 20px 20px;
+    }
+    
+    #Package h2 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: .65em;
+    }
+    
+    #Package h2 span {
+        color: #e3242b;
     }
     
     .package-container {
@@ -549,13 +766,14 @@
     }
     
     .package {
-        width: 45%;
+        width: 48%;
         /*background: #8a4a4a;*/
         height: 70vh;
         flex-wrap: wrap;
         overflow: hidden;
         position: relative;
         border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.925);
     }
     
     .package img {
@@ -570,58 +788,87 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: transparent;
-        transition: .5s;
-    }
-    
-    .overlay:hover {
         background: rgba(0, 0, 0, 0.473);
-    }
-    
-    .overlay h3 {
-        color: #fff;
-        font-size: 3rem;
-        font-weight: 800;
-        line-height: 2rem;
-        margin-bottom: .5em;
-        padding: 5px;
-        width: 100%;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        position: absolute;
-        opacity: 0;
         transition: .5s;
     }
     
-    .overlay:hover h3 {
+    /*.overlay:hover {
+        background: rgba(0, 0, 0, 0.473);
+    }*/
+    
+    .image span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3rem;
+        color: transparent;
+        stroke: #092d42;
+        -webkit-text-stroke: 2px #a2bbc9;
+        top: 10%;
+        left: 10%;
+        position: absolute;
+        z-index: 1000;
+    }
+    
+    
+    /*.overlay:hover h3,
+    .overlay:hover p {
         bottom: 49%;
         opacity: 1;
-    }
+    }*/
     
-    .overlay a {
+    .info_package {
         font-size: 2rem;
         font-weight: 800;
-        line-height: 1.75rem;
+        line-height: 3rem;
         text-decoration: none;
         color: #e3242b;
         background: #092d42;
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: start;
         padding: 10px;
         width: 100%;
-        height: 15%;
-        bottom: 0;
+        height: 45%;
+        bottom: -55%;
         left: 50%;
         transform: translateX(-50%);
-        position: absolute;
+        position: relative;
         transition: .5s;
     }
     
-    .package a:hover {
-        background: #e3242b;
-        color: #092d42;
+    .info_package h3 {
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+    
+    .info_package p {
+        color: #999b99;
+        font-size: 2rem;
+        font-weight: 800;
+        border: 2px dotted;
+        padding: 2px;
+        margin-bottom: .3em;
+    }
+    
+    .info_package strong {
+        margin-left: 2em;
+        color: #26ad31;
+    }
+    
+    .info_package a{
+        font-size: 1.4rem;
+        font-weight: 800;
+        line-height: 1.75rem;
+        text-decoration: none;
+        border-radius: 30px;
+        color: #e3242b;
+        border: 1px solid #207cb1;
+        padding: 10px;
+        transition: .5s;
     }
 
 
@@ -639,19 +886,26 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 1.5em;
     }
     
     .contact img {
         display: none;
     }
+
+    .Litso-contact {
+        text-align: start;
+        width: 100%;
+    }
     
     .contact {
         background: #1a1a1a;
         flex-direction: column;
+        padding: 0;
         width: 100%;
-        height: 80vh;
     }
 
+    .backTop{
+        left: 90%;
+    }
 
 }

@@ -65,11 +65,12 @@ html {
     color: #e3242b;
 }*/
 
-#Navbar ul li a:hover::after {
+#Navbar ul li a:hover::after,
+#Navbar ul li a.active::after {
     content: " ";
     width: 35%;
     height: 4px;
-    background: #e3242b;
+    background: #d84639;
     position: absolute;
     bottom: -2px;
     left: 19px;
@@ -130,9 +131,9 @@ html {
     z-index: 1000; /* Ensure text is above images */
 }
 
-#Hero1 .hero-text {
+#Hero1 {
     padding: 20px 80px;
-    height: 60vh;
+    height: 30vh;
     width: 100%;
     background-size: cover;
     background-position: top 25% right 0;
@@ -141,7 +142,7 @@ html {
 
 #Hero1 .slide-image {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -169,7 +170,7 @@ html {
 }
 
 .hero-text span {
-    color: #e3242b;
+    color: #d84639;
     font-size: 4rem;
 }
 
@@ -187,13 +188,13 @@ html {
     padding: 10px;
     cursor: pointer;
     text-transform: uppercase;
-    border: 2px solid #e3242b;
+    border: 2px solid #f7cfcc;
 }
 
 #Hero a:hover {
     transition: 1s;
-    border: 2px solid #e3242b;
-    background: #e3242b;
+    border: 2px solid #ff857a;
+    background: #d84639;
 }
 
 .slide-image {
@@ -214,14 +215,70 @@ html {
     font-size: 3rem;
     text-align: center;
     margin-bottom: .65em;
+    color: #403179;
 }
 
 #About h2 span {
-    color: #e3242b;
+    color: #d84639;
 }
 
 .about-container {
     gap: 1em;
+}
+
+.litso-container {
+    gap: 1em;
+}
+
+.litso {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.litso_flex-1 {
+    /*border: 2px solid #092d42;*/
+    width: 70%;
+}
+
+.litso_flex-2 {
+    width: 30%;
+}
+
+.litso_image img {
+    width: 90%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 5px 10px #092d42;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+.litso_flex-2 img {
+    width: 100%;
+}
+
+.litso-text {
+    padding: 15px;
+    width: 70%;
+}
+
+.litso-text h3 {
+    font-size: 3rem;
+    color: #092d42;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+}
+
+.litso-text span {
+    color: #d84639;
+}
+
+.litso-text p {
+    font-size: 1.4rem;
+    color: #777676;
+    margin-bottom: 1.5em;
 }
 
 .about {
@@ -280,7 +337,7 @@ html {
 }
 
 .about-text span {
-    color: #e3242b;
+    color: #d84639;
 }
 
 .about-text p {
@@ -292,7 +349,7 @@ html {
 .about-text  a {
     text-decoration: none;
     font-size: 20px;
-    color: #e3242b;
+    color: #d84639;
     padding: 10px;
     cursor: pointer;
     text-transform: uppercase;
@@ -315,10 +372,11 @@ html {
     font-size: 3rem;
     text-align: center;
     margin-bottom: .65em;
+    color: #403179;
 }
 
 #Touring h2 span {
-    color: #e3242b;
+    color: #d84639;
 }
 
 .tour-container {
@@ -340,6 +398,10 @@ html {
     height: 39vh;
     flex-wrap: wrap;
     cursor: pointer;
+}
+
+.tour a {
+    text-decoration: none;
 }
 
 .tour:hover {
@@ -384,7 +446,7 @@ html {
 }
 
 #cape-town span {
-    color: #e3242b;
+    color: #d84639;
     font-size: 3rem;
 }
 
@@ -397,13 +459,12 @@ html {
 }
 
 .cape_town {
-    display: flex;
-    justify-content: center;
+
 }
 
 
 .cape-1 img{
-    width: 100%;
+    width: 70%;
     height: 50vh;
     background-size: cover;
 }
@@ -417,54 +478,98 @@ html {
 }
 
 .cape-2 img{
-    width: 90%;
+    width: 100%;
     height: 30vh;
     background-size: cover;
+    transition: .4s;
+    margin-bottom: 1em;
+}
 
+.cape-2 img:hover{
+    transition: .4s;
+    box-shadow: 0 5px 10px #092d42;
+}
+
+.slide_jozi {
+    display: flex;
+    justify-content: center;
 }
 
 .cape_turing-info {
     padding: 15px ;
-    border: 2px solid #092d42;
-    background-color: #cac9c9;
+    background-color: none;
+    width: 55%;
+}
+
+.turing-activity {
+    /*position: absolute;
+    left: 60%;
+    top: 106%;
+    transform: translate(-10%, 10%);*/
+    background: #f7cfcc;
+    padding: 20px;
+    width: 40%;
+    height: 70%;
+}
+
+.turing-activity h3{
+    color: #403179;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: .2em;
+    width: 95%;
+}
+
+.turing-activity ul li {
+    margin-left: 1em;
+    padding: 5px 0;
+    font-size: 25px;
+    color: #7a7a7a;
 }
 
 .cape_turing-info a {
     text-decoration: none;
-    font-size: 20px;
-    color: #e3242b;
+    font-size: 30px;
+    color: #d84639;
     padding: 10px;
     cursor: pointer;
     text-transform: uppercase;
-    border: 2px solid #092d42;
-    margin-bottom: 1em;
+    border: 2px solid #9b9b99;
+    margin-bottom: 2em;
+}
+
+.cape_turing-info strong {
+    color: #777676;
+    font-size: 30px;
 }
 
 .cape_turing-info a:hover {
     transition: 1s;
     color: #fff;
-    border: 2px solid #e3242b;
-    background: #e3242b;
+    border: 2px solid #d84639;
+    background: #d84639;
 }
 
 .cape_turing-info h2 {
-    color: #e3242b;
+    color: #403179;
     font-size: 4rem;
     text-transform: uppercase;
 }
 
 .cape_turing-info h3 {
     color: #114d70;
-    font-size: 1.5rem;
+    font-size: 30px;
     text-transform: uppercase;
     margin-bottom: .2em;
+    width: 60%;
 }
 
 .cape_turing-info p {
-    color: #383838;
+    color: #9b9b99;
     margin-bottom: 1em;
     font-size: 25px;
-    width: 70%;
+    width: 90%;
+    font-family:  sans-serif;
 }
 
 
@@ -485,10 +590,11 @@ html {
     font-size: 3rem;
     text-align: center;
     margin-bottom: .65em;
+    color: #403179;
 }
 
 #Package h2 span {
-    color: #e3242b;
+    color: #d84639;
 }
 
 .package-container {
@@ -556,7 +662,7 @@ html {
     font-weight: 800;
     line-height: 3rem;
     text-decoration: none;
-    color: #e3242b;
+    color: #d84639;
     background: #092d42;
     display: flex;
     flex-direction: column;
@@ -598,14 +704,14 @@ html {
     line-height: 1.75rem;
     text-decoration: none;
     border-radius: 30px;
-    color: #e3242b;
+    color: #d84639;
     border: 1px solid #207cb1;
     padding: 10px;
     transition: .5s;
 }
 
 .package a:hover {
-    background: #e3242b;
+    background: #d84639;
     border: 1px solid #e3242b;
     color: #092d42;
 }
@@ -623,10 +729,11 @@ html {
     font-size: 3rem;
     text-align: center;
     margin-bottom: .65em;
+    color: #403179;
 }
 
 #Contact span {
-    color: #e3242b;
+    color: #d84639;
 }
 
 
@@ -659,6 +766,51 @@ html {
     justify-content: center;
     align-items: center;
     gap: 1.5em;
+    padding: 10px;
+}
+
+.Litso-contact {
+    text-align: start;
+    width: 100%;
+    padding: 20px;
+}
+
+.Litso-contact h5 {
+    font-size: 2.5rem;
+    color: #ddd;
+    margin-bottom: .5em;
+    width: 100%;
+}
+
+.Litso-contact p  {
+    text-decoration: none;
+    font-size: 25px;
+    color: #d84639;
+    margin-bottom: .4em;
+}
+
+.Litso-contact a {
+    text-decoration: none;
+    color: #ddd;
+    transition: .2s;
+}
+
+.Litso-contact a:hover {
+    color: #d84639;
+}
+
+.Litso-contact button {
+    text-decoration: none;
+    font-size: 25px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.Litso-contact button a {
+    padding: 10px;
+    background-color: #092d42;
+    color: #f1f1f1;
 }
 
 /*.contact img {
@@ -696,14 +848,14 @@ form button {
     padding: 10px;
     border: none;
     color: #fff;
-    background: #935a91;
+    background: #d84639;
     cursor: pointer;
     transition: 1s;
 }
 
 form button:hover {
     background: none;
-    border: 2px solid #935a91;
+    border: 1px solid #d84639;
     transition: 1s;
 }
 
@@ -747,8 +899,8 @@ form input::placeholder, textarea::placeholder {
 }
 
 .footer svg {
-    fill: red;
-    background: #9e3e79;
+    fill: #d84639;
+    background: #f7cfcc;
     padding: 10px;
     border-radius: 50%;
 }
@@ -773,7 +925,7 @@ form input::placeholder, textarea::placeholder {
 
 .footer a:hover {
     text-decoration: underline;
-    color: #a5519c;
+    color: #d84639;
 }
 
 .footer i {
@@ -807,7 +959,7 @@ footer p {
 }
 
 footer a {
-    color: #0c61d1;
+    color: #403179;
     font-weight: 700;
 }
 
@@ -817,7 +969,7 @@ footer a {
     left: 95%;
     padding: 10px;
     text-align: center;
-    background: #e3242b;
+    background: #d84639;
     opacity: 0;
     cursor: pointer;
     z-index: 2;
@@ -830,7 +982,7 @@ footer a {
 #fixed a {
     position: fixed;
     transform: all .5s ease;
-    background-color:  #25d366;
+    background-color:  #d84639;
     fill: #25d366;
     fill-rule: #25d366;
     display: block;
@@ -862,7 +1014,7 @@ footer a {
     display: block;
     width: 60px;
     height: 60px;
-    background-color: #25d366;
+    background-color: #d84639;
     border-radius: 50%;
     -webkit-animation: pulse-border 1500ms ease-out infinite;
     animation: pulse-border 1500ms ease-out infinite;
