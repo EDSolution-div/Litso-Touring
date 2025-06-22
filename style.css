@@ -172,8 +172,8 @@ html {
 .hero-text span {
     color: #d84639;
     font-size: 4rem;
+    width: 100%;
 }
-
 
 #Hero .hero-text p {
     font-size: 2rem;
@@ -365,7 +365,6 @@ html {
 
 #Touring {
     padding: 20px 80px;
-
 }
 
 #Touring h2 {
@@ -500,6 +499,15 @@ html {
     background-color: none;
     width: 55%;
 }
+
+.cape_turing-info ul li {
+    margin-left: 1em;
+    padding: 5px 0;
+    font-size: 25px;
+    color: #7a7a7a;
+}
+
+
 
 .turing-activity {
     /*position: absolute;
@@ -678,6 +686,16 @@ html {
     transition: .5s;
 }
 
+.litso_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px dotted;
+    padding: 5px;
+    margin-bottom: .2em;
+    width: 100%;
+}
+
 .info_package h3 {
     color: #fff;
     font-size: 2.5rem;
@@ -688,13 +706,9 @@ html {
     color: #999b99;
     font-size: 2rem;
     font-weight: 800;
-    border: 2px dotted;
-    padding: 5px;
-    margin-bottom: .2em;
 }
 
 .info_package strong {
-    margin-left: 3em;
     color: #26ad31;
 }
 
