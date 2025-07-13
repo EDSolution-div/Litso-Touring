@@ -2,16 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto;
+    font-family: "Roboto";
 }
 
-@font-face {
+/*@font-face {
     font-family: Roboto;
     src: url(Text-font/Roboto-BoldCondensedItalic.ttf);
-}
+}*/
 
 html {
-    background: #f1f1f1;
+    background: #f6f9fe;
     scroll-behavior: smooth;
 }
 
@@ -20,8 +20,6 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 20px 80px;
-    position: sticky;
-    width: 100%;
     z-index: 10000;
 }
 
@@ -32,29 +30,53 @@ html {
 
 #Navbar img {
     background-repeat: no-repeat;
-    height: 12vh;
+    height: 11vh;
     width: 22%;
     object-fit: contain;
     background-size: cover;
     background-position: center;
 }
 
-#Navbar ul {
+#Navbar  ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#Navbar ul li {
+#Navbar  ul li {
     list-style: none;
+    position: relative;
+}
 
+#Navbar  ul li ul {
+    position: absolute;
+    width: 210px;
+    left: 0;
+    display: none;
+    background: #f6f9fe;
+    padding: 10px 0px;
+}
+
+#Navbar  ul li ul li {
+    /*width: 100%;*/
+    padding: 10px 0;
+}
+
+#Navbar  ul li ul li ul {
+    left: 200px;
+    top: 0;
+}
+
+#Navbar  ul li:focus-within > ul,
+#Navbar  ul li:hover > ul {
+    display: block;
 }
 
 #Navbar ul li a {
     text-decoration: none;
     padding: 15px;
-    font-size: 33px;
-    color: #fff;
+    font-size: 25px;
+    color: #1a1a1a;
     cursor: pointer;
     font-weight: 700;
     position: relative;
@@ -122,47 +144,34 @@ html {
 }
 /* close mobile nav */
 
-#Hero .hero-text {
+#Hero  {
     padding: 20px 80px;
-    height: 90vh;
     width: 100%;
-    background-size: cover;
-    background-position: top 25% right 0;
-    z-index: 1000; /* Ensure text is above images */
-}
-
-#Hero1 {
-    padding: 20px 80px;
-    height: 30vh;
-    width: 100%;
-    background-size: cover;
-    background-position: top 25% right 0;
-    z-index: 1000; /* Ensure text is above images */
-}
-
-#Hero1 .slide-image {
-    width: 100%;
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.hero-text {
-    top: 0%;
-    left: 0%;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    margin-bottom: -9%;
-    transform: translateY(-20%);
+    background-size: cover;
+    background-position: center;
+    background-image: url(Images/elephant-5647723_1280.jpg);
+}
+
+#Hero1  {
+    padding: 20px 80px;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-size: cover;
+    background-position: top 70% center;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.507), rgba(0, 0, 0, .1)) ,url(Images/Hero/luxury-plane-7382413_1920.jpg);
 }
 
 .hero-text  h1 {
-    font-size: 4rem;
+    font-size: 50px;
     width: 100%;
     color: #f1f1f1;
     font-family: 'Poppins';
@@ -173,6 +182,13 @@ html {
     color: #d84639;
     font-size: 4rem;
     width: 100%;
+}
+
+#Hero1 .hero-text span {
+    color: #fff;
+    font-size: 40px;
+    width: 100%;
+    text-transform: uppercase;
 }
 
 #Hero .hero-text p {
@@ -188,16 +204,17 @@ html {
     padding: 10px;
     cursor: pointer;
     text-transform: uppercase;
-    border: 2px solid #f7cfcc;
+    border: 2px solid #d84639;
 }
 
 #Hero a:hover {
     transition: 1s;
+    color: #d84639;
     border: 2px solid #ff857a;
-    background: #d84639;
+    background: #fff;
 }
 
-.slide-image {
+/*.slide-image {
     width: 100%;
     height: 90vh;
     background-size: cover;
@@ -205,7 +222,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-}
+}*/
 
 #About {
     padding: 20px 80px;
@@ -215,7 +232,7 @@ html {
     font-size: 3rem;
     text-align: center;
     margin-bottom: .65em;
-    color: #403179;
+    color: #092d42;
 }
 
 #About h2 span {
@@ -246,22 +263,30 @@ html {
 }
 
 .litso_image img {
-    width: 90%;
+    width: 80%;
     height: 50vh;
     background-size: cover;
     background-position: center;
+    object-fit: cover;
     box-shadow: 0px 5px 10px #092d42;
     cursor: pointer;
     margin-bottom: 1em;
 }
 
+.airplane img {
+    /*height: 30vh;*/
+}
+
 .litso_flex-2 img {
     width: 100%;
+    height: 40vh;
 }
 
 .litso-text {
     padding: 15px;
     width: 70%;
+    /*height: 83vh;*/
+    /*box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.562);*/
 }
 
 .litso-text h3 {
@@ -303,6 +328,7 @@ html {
     background-position: center;
     box-shadow: 0px 5px 10px #092d42;
     cursor: pointer;
+
 }
 
 .about_image::before {
@@ -325,12 +351,12 @@ html {
 }
 
 .about-text {
-    padding: 15px;
+    /*padding: 15px;*/
     width: 45%;
 }
 
 .about-text h3 {
-    font-size: 3rem;
+    font-size: 40px;
     color: #092d42;
     text-transform: uppercase;
     margin-bottom: .5em;
@@ -341,7 +367,7 @@ html {
 }
 
 .about-text p {
-    font-size: 1.4rem;
+    font-size: 23px;
     color: #777676;
     margin-bottom: 1.5em;
 }
@@ -368,10 +394,10 @@ html {
 }
 
 #Touring h2 {
-    font-size: 3rem;
+    font-size: 40px;
     text-align: center;
     margin-bottom: .65em;
-    color: #403179;
+    color: #092d42;
 }
 
 #Touring h2 span {
@@ -406,6 +432,7 @@ html {
 .tour:hover {
     transition: .3s;
     box-shadow: 0px 5px 15px #156594;
+    border-top-right-radius: 5rem;
 }
 
 .tour-flex {
@@ -418,7 +445,8 @@ html {
     width: 100%;
     height: 39vh;
     z-index: -1;
-    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 5rem;
+    object-fit: cover;
 }
 
 .tour-flex {
@@ -432,16 +460,35 @@ html {
     height: 39vh;
     top: -102%;
     position: relative;
-    background: rgba(0, 0, 0, 0.308);
+    background: rgba(0, 0, 0, 0.507);
     display: flex;
+    border-top-right-radius: 5rem;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    text-align: start;
     opacity: 1;
+}
+
+.text-info h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    font-size: 30px;
+    color:  #ffffff;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1000;
+    text-transform: uppercase;
 }
 
 #cape-town {
     padding: 20px 80px;
+}
+
+#cape-town h1 {
+    margin-bottom: 1em;
 }
 
 #cape-town span {
@@ -455,17 +502,41 @@ html {
     flex-wrap: wrap;
     align-items: center;*/
     gap: 1em;
+    margin-bottom: 2em;
 }
 
-.cape_town {
-
+.cape-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
 }
 
 
 .cape-1 img{
-    width: 70%;
+    width: 45%;
     height: 50vh;
     background-size: cover;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.911);
+    object-fit: cover;
+}
+
+.cape_info {
+    width: 55%;
+}
+
+.cape_info h2 {
+    color: #092d42;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.cape_info p {
+    color: #757575;
+    margin-bottom: 1em;
+    font-size: 25px;
+    width: 100%;
+    font-family:  sans-serif;
 }
 
 .cape-2 {
@@ -478,10 +549,11 @@ html {
 
 .cape-2 img{
     width: 100%;
-    height: 30vh;
+    height: 35vh;
     background-size: cover;
     transition: .4s;
     margin-bottom: 1em;
+    object-fit: cover;
 }
 
 .cape-2 img:hover{
@@ -492,12 +564,12 @@ html {
 .slide_jozi {
     display: flex;
     justify-content: center;
+    gap: 1em;
 }
 
 .cape_turing-info {
-    padding: 15px ;
-    background-color: none;
-    width: 55%;
+    padding: 10px;
+    width: 60%;
 }
 
 .cape_turing-info ul li {
@@ -507,21 +579,19 @@ html {
     color: #7a7a7a;
 }
 
-
-
 .turing-activity {
     /*position: absolute;
     left: 60%;
     top: 106%;
     transform: translate(-10%, 10%);*/
     background: #f7cfcc;
-    padding: 20px;
-    width: 40%;
-    height: 70%;
+    padding: 10px;
+    width: 50%;
+    box-shadow:  5px 0px 10px rgba(0, 0, 0, 0.911);
 }
 
 .turing-activity h3{
-    color: #403179;
+    color: #092d42;
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: .2em;
@@ -559,7 +629,7 @@ html {
 }
 
 .cape_turing-info h2 {
-    color: #403179;
+    color: #114d70;
     font-size: 4rem;
     text-transform: uppercase;
 }
@@ -581,24 +651,15 @@ html {
 }
 
 
-
-
-
-
-
-
-
-
-
 #Package {
-    padding: 20px 80px;
+    padding: 20px 40px;
 }
 
 #Package h2 {
-    font-size: 3rem;
+    font-size: 40px;
     text-align: center;
     margin-bottom: .65em;
-    color: #403179;
+    color: #092d42;
 }
 
 #Package h2 span {
@@ -613,7 +674,7 @@ html {
 }
 
 .package {
-    width: 30%;
+    width: 24%;
     /*background: #8a4a4a;*/
     height: 70vh;
     flex-wrap: wrap;
@@ -626,6 +687,7 @@ html {
 .package img {
     width: 100%;
     height: 70vh;
+    object-fit: cover;
 } 
 
 .overlay {
@@ -635,7 +697,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.473);
+    background: rgba(0, 0, 0, 0.548);
     transition: .5s;
 }
 
@@ -647,15 +709,16 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-size: 3rem;
+    text-align: start;
+    font-size: 35px;
     color: transparent;
     stroke: #092d42;
-    -webkit-text-stroke: 2px #a2bbc9;
+    -webkit-text-stroke: 2px #5bb3e6;
     top: 10%;
-    left: 10%;
+    left: 5%;
     position: absolute;
     z-index: 1000;
+    text-transform: uppercase;
 }
 
 
@@ -668,7 +731,7 @@ html {
 .info_package {
     font-size: 2rem;
     font-weight: 800;
-    line-height: 3rem;
+    line-height: 40px;
     text-decoration: none;
     color: #d84639;
     background: #092d42;
@@ -692,19 +755,18 @@ html {
     align-items: center;
     border: 2px dotted;
     padding: 5px;
-    margin-bottom: .2em;
+    margin-bottom: .3em;
     width: 100%;
 }
 
 .info_package h3 {
     color: #fff;
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 35px;
 }
 
 .info_package p {
     color: #999b99;
-    font-size: 2rem;
+    font-size: 25px;
     font-weight: 800;
 }
 
@@ -720,7 +782,7 @@ html {
     border-radius: 30px;
     color: #d84639;
     border: 1px solid #207cb1;
-    padding: 10px;
+    padding: 6px;
     transition: .5s;
 }
 
@@ -740,16 +802,15 @@ html {
 }
 
 #Contact  h3 {
-    font-size: 3rem;
+    font-size: 40px;
     text-align: center;
     margin-bottom: .65em;
-    color: #403179;
+    color: #092d42;
 }
 
 #Contact span {
     color: #d84639;
 }
-
 
 .contact-container {
     display: flex;
@@ -766,21 +827,20 @@ html {
 }
 
 .contact img {
-    width: 50%;
-    height: 40%;
+    width: 51%;
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .contact {
     background: #1a1a1a;
     display: flex;
-    width: 90%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     gap: 1.5em;
-    padding: 10px;
 }
 
 .Litso-contact {
@@ -790,8 +850,8 @@ html {
 }
 
 .Litso-contact h5 {
-    font-size: 2.5rem;
-    color: #ddd;
+    font-size: 40px;
+    color: #fff;
     margin-bottom: .5em;
     width: 100%;
 }
@@ -805,7 +865,7 @@ html {
 
 .Litso-contact a {
     text-decoration: none;
-    color: #ddd;
+    color: #9b9b99;
     transition: .2s;
 }
 
@@ -835,10 +895,10 @@ html {
     background-color: #92548c;
 }*/
 
-iframe{
+/*iframe{
     width: 100%;
     height: 65vh;
-}
+}*/
 
 form {
     display: flex;
@@ -848,11 +908,12 @@ form {
     width: 90%;
     text-align: center;
     padding-right: 10px;
+    padding: 10px;
 }
 
 form h5 {
-    font-size: 2.5rem;
-    color: #ddd;
+    font-size: 40px;
+    color: #f1f1f1;
     margin-bottom: .5em;
 }
 
@@ -900,7 +961,7 @@ form input::placeholder, textarea::placeholder {
 }
 
 #Footer h2 {
-    font-size: 2rem;
+    font-size: 30px;
     text-align: center;
     color: #dbdbdb;
     margin-bottom: 1em;
@@ -927,7 +988,7 @@ form input::placeholder, textarea::placeholder {
     width: 70%;
     height: 45vh;
     padding: 10px;
-    margin-left: 6%;
+    margin-left: 5%;
     margin-bottom: 1em;
 }
 
@@ -956,7 +1017,7 @@ form input::placeholder, textarea::placeholder {
 }
 
 .footer p {
-    color: #aaa;
+    color: #fff;
     text-align: start;
     font-size: 20px;
 }
@@ -968,12 +1029,12 @@ footer {
 }
 
 footer p {
-    font-size: 1.5rem;
+    font-size: 20px;
     color: #aaa;
 }
 
 footer a {
-    color: #403179;
+    color: #092d42;
     font-weight: 700;
 }
 
