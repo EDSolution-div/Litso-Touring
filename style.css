@@ -290,7 +290,7 @@ html {
 }
 
 .litso-text h3 {
-    font-size: 3rem;
+    font-size: 40px;
     color: #092d42;
     text-transform: uppercase;
     margin-bottom: .5em;
@@ -301,7 +301,7 @@ html {
 }
 
 .litso-text p {
-    font-size: 1.4rem;
+    font-size: 25px;
     color: #777676;
     margin-bottom: 1.5em;
 }

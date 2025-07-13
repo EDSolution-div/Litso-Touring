@@ -237,7 +237,6 @@
     }
     
     .litso-text h3 {
-        font-size: 3rem;
         color: #092d42;
         text-transform: uppercase;
         margin-bottom: .5em;
@@ -248,7 +247,7 @@
     }
     
     .litso-text p {
-        font-size: 1.4rem;
+        width: 100%;
         color: #777676;
         margin-bottom: 1.5em;
     }
