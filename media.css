@@ -161,10 +161,10 @@
     }
     
     .about-text h3 {
-        font-size: 3rem;
         color: #092d42;
         text-transform: uppercase;
         margin-bottom: .5em;
+        width: 100%;
     }
     
     .about-text span {
@@ -622,7 +622,6 @@
     }
     
     .about-text h3 {
-        font-size: 3rem;
         color: #092d42;
         text-transform: uppercase;
         margin-bottom: .5em;
