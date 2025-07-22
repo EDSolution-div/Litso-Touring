@@ -50,7 +50,7 @@ html {
 
 #Navbar  ul li ul {
     position: absolute;
-    width: 210px;
+    width: 230px;
     left: 0;
     display: none;
     background: #f6f9fe;
@@ -74,9 +74,9 @@ html {
 
 #Navbar ul li a {
     text-decoration: none;
-    padding: 15px;
+    padding: 20px;
     font-size: 25px;
-    color: #1a1a1a;
+    color: #000;
     cursor: pointer;
     font-weight: 700;
     position: relative;
@@ -94,8 +94,8 @@ html {
     height: 4px;
     background: #d84639;
     position: absolute;
-    bottom: -2px;
-    left: 19px;
+    bottom: 15px;
+    left: 30px;
 }
 
 /* mobile nav */
@@ -835,12 +835,13 @@ html {
 }
 
 .contact {
-    background: #1a1a1a;
+    box-shadow: 0 5px 10px #000;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     gap: 1.5em;
+    background: #fff;
 }
 
 .Litso-contact {
@@ -851,7 +852,7 @@ html {
 
 .Litso-contact h5 {
     font-size: 40px;
-    color: #fff;
+    color: #092d42;
     margin-bottom: .5em;
     width: 100%;
 }
@@ -913,7 +914,7 @@ form {
 
 form h5 {
     font-size: 40px;
-    color: #f1f1f1;
+    color: #092d42;
     margin-bottom: .5em;
 }
 
@@ -930,7 +931,8 @@ form button {
 
 form button:hover {
     background: none;
-    border: 1px solid #d84639;
+    border: 1px solid #fff;
+    color: #d84639;
     transition: 1s;
 }
 
@@ -940,7 +942,7 @@ form input, textarea {
     width: 80%;
     background: none;
     outline: none;
-    border: 1px solid #aaa;
+    border: 1px solid #777777;
     color: #fff;
 }
 
@@ -949,15 +951,15 @@ form input:focus, textarea:focus{
 }
 
 form input::placeholder, textarea::placeholder {
-    color: #aaa;
+    color: #1a1a1a;
 }
 
 
 #Footer {
     padding: 20px 80px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.671)), url(images/bogdan-condr-q1KLbswF70Y-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.671));
+    display: flex;
+    justify-content: center;
 }
 
 #Footer h2 {
@@ -966,6 +968,35 @@ form input::placeholder, textarea::placeholder {
     color: #dbdbdb;
     margin-bottom: 1em;
 }
+
+#Footer p {
+    font-size: 20px;
+    color: #dbdbdb;
+    margin-bottom: 1em;
+    width: 80%;
+}
+
+.litso-img img {
+    width: 100%;
+    /*height: 50vh;*/
+}
+
+#Footer a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+    color: #fff;
+    transition: .3s;
+}
+
+    #Footer a:hover {
+        background: #e3242b;
+        color: #fff;
+        border-radius: 50px;
+    }
 
 .container-footer {
     display: flex;
@@ -1025,12 +1056,11 @@ form input::placeholder, textarea::placeholder {
 footer {
     text-align: center;
     padding: 20px 80px;
-    background: #1a1a1a;
 }
 
 footer p {
     font-size: 20px;
-    color: #aaa;
+    color: #1a1a1a;
 }
 
 footer a {

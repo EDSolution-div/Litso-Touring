@@ -16,7 +16,7 @@
         top: 11%;
         left: 0;
         width: 100%;
-        background: rgb(0, 0, 0);
+        background: #f6f9fe;
         align-items: center;
         opacity: 0;
         transform: translateY(-10px);
@@ -71,6 +71,7 @@
     #Navbar ul li a.active {
         background: #e3242b;
         color: #fff;
+        border-radius: 50px;
     }
     
     #Navbar ul li a:hover::after,
@@ -309,7 +310,6 @@
     }
     
     .contact {
-        background: #1a1a1a;
         flex-direction: column;
         width: 100%;
     }
@@ -438,6 +438,20 @@
 
     form input, textarea {
         width: 100%;
+    }
+
+    #Footer {
+        padding: 20px 20px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #Footer p {
+        width: 100%;
+    }
+
+    #Footer a {
+        display: block;
     }
 
     footer {
@@ -725,7 +739,7 @@
     color: #403179;
     font-size: 35px;
     text-transform: uppercase;
-}
+
 
     .cape-2 img{
         width: 100%;
@@ -940,8 +954,9 @@
 
 }
 
+}
+
 @media (min-width: 1024px) and (max-width: 1279px) {
-    
 
     #Navbar {
         display: flex;
@@ -1259,7 +1274,6 @@
     footer {
         text-align: center;
         padding: 20px 40px;
-        background: #1a1a1a;
     }
     
     .backTop.active {
